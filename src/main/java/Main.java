@@ -12,7 +12,7 @@ public class Main {
         quest2_arrayFiller();
         quest3_multiply();
         quest4_getMatrix();
-        int[] arr = quest5_getArray(10, 3);
+        quest5_getArray(10, 3);
         quest6_arraySort();
         quest7();
         quest8();
@@ -85,7 +85,7 @@ public class Main {
                 int x = arr.length - 1 - i;
 
                 if(j == x) {
-                    arr[i][j] = j == x ? 1 : 0;
+                    arr[i][j] = 1;
                 }
 
                 System.out.print(arr[i][j] + " ");
@@ -134,11 +134,11 @@ public class Main {
         int[] arr2 = {1,1,1,2,1};
         Boolean result = quest7_checkBalance(arr2);
         int[] arr3 = {2, 2, 2, 1, 2, 2, 10, 1};
-        result = quest7_checkBalance(arr3);
+        quest7_checkBalance(arr3);
         int[] arr4 = {2, 5, 6, 1, 3, 10, 1};
-        result = quest7_checkBalance(arr4);
+        quest7_checkBalance(arr4);
         int[] arr5 = {2, 5, 6, 1, 4, 3, 10, 1};
-        result = quest7_checkBalance(arr5);
+        quest7_checkBalance(arr5);
         System.out.println();
     }
 
@@ -152,7 +152,7 @@ public class Main {
 
         if (arrLength <= 0){
             System.out.println("Error. Need more array values");
-            return result;
+            return false;
         }
 
         for (leftArrCount = 0; leftArrCount <= arrLength; leftArrCount++) {
@@ -175,7 +175,7 @@ public class Main {
 
         }
 
-        System.out.println("Result: " + result + (result == true ? ", on element: " + leftArrCount + " (from 0)" : ""));
+        System.out.println("Result: " + result + (result ? ", on element: " + leftArrCount + " (from 0)" : ""));
         return result;
     }
 
